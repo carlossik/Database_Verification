@@ -182,7 +182,7 @@ def create_kafka_checks():
                 kaf_tests = requests.get(kafka_string,headers=headers2).json()
                 print(kaf_tests)
 
-                print([job_id])
+                
 
 
 create_all_sql()
