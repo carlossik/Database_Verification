@@ -95,7 +95,7 @@ def create_all_sql():
                 sql = "select count(*)  from dspe.file_audit_info where job_task_id =" + str(row[4])
                 sqls.append(sql)
 
-    #print( 'there are ' +' ' +str(len(sqls)) + ' '+'queries' + ' ' + 'to execute')
+    
 
     for sql in sqls:
         if "select count(*) from delivery_trueview" in sql:
@@ -122,9 +122,9 @@ def create_all_sql():
 def before_test():
 
     try:
-        conn = MySQLdb.connect(passwd="tli00eNND2ROLm:d,cq-", db="dspe", host="proteus.odin.tel-dev.io", port=3306,
-                               user="root")
-        engine = create_engine('mysql+pymysql://root:tli00eNND2ROLm:d,cq-@proteus.odin.tel-dev.io:3306/dspe')
+        conn = MySQLdb.connect(passwd="xxxxxxxxxxxxxxxxx", db="dspe", host="proteus.odin.tel-dev.io", port=3306,
+                               user="xxxxxxxx")
+        engine = create_engine('mysql+pymysql://xxxx:xxxxxxxxxxxxx:d,cq-@proteus.odin.tel-dev.io:3306/dspe')
         sql = 'DELETE from dspe.file_audit_info'
         sql2 = 'select count(*) from dspe.file_audit_info'
         cur = conn.cursor()
@@ -147,9 +147,9 @@ def execute_sql():
 
     import pandas as pd
     try:
-        conn = MySQLdb.connect(passwd="tli00eNND2ROLm:d,cq-", db="dspe", host="proteus.odin.tel-dev.io", port=3306,
-                               user="root")
-        engine = create_engine('mysql+pymysql://root:tli00eNND2ROLm:d,cq-@proteus.odin.tel-dev.io:3306/dspe')
+        conn = MySQLdb.connect(passwd="xxxxxxxxxxxxxxxxxxx", db="dspe", host="proteus.odin.tel-dev.io", port=3306,
+                               user="xxxx")
+        engine = create_engine('mysql+pymysql://xxxx:xxxxxxxxxxxxx:d,cq-@proteus.odin.tel-dev.io:3306/dspe')
         sqls = create_all_sql()
         for sql in sqls:
             try:
